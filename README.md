@@ -1,4 +1,4 @@
-# Algoritmo DDA e do Ponto Médio  :computer:
+# Algoritmo DDA e do Ponto Médio  :computer: 
 
 
 
