@@ -36,6 +36,8 @@ public class algoritmoDDA {
         if (Math.abs(y2 - y1) > m) {
             m = Math.abs(y2 - y1);
         }
+        
+        System.out.format("Valor de m = %2.f %n", m);
 
         // valor da incrementação de x //
         xInc = (x2 - x1) / m;
