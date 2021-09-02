@@ -24,27 +24,32 @@ public class algoritmoDDA {
 
     // procedimento DDA //
     public static void DDA(double x1, double y1, double x2, double y2) {
-       
+
         // declaração de variaveis //
-        double m;
+        double length;
         double x, y, xInc, yInc;
 
-        // m = [x2 - x1] (variação de x) para m < 0 //
-        m = Math.abs(x2 - x1);
+        // length = [x2 - x1] (variação de x) para length < 0 //
+        length = Math.abs(x2 - x1);
 
-        // m = [y2 - y1] (variação de y) para m > 0 //
-        if (Math.abs(y2 - y1) > m) {
-            m = Math.abs(y2 - y1);
+        // length = [y2 - y1] (variação de y) para length > 0 //
+        if (Math.abs(y2 - y1) > length) {
+            length = Math.abs(y2 - y1);
         }
-        
-        System.out.format("Valor de m = %2.f %n", m);
 
         // valor da incrementação de x //
-        xInc = (x2 - x1) / m;
+        xInc = (x2 - x1) / length;
 
         // valor da incrementação de y //
-        yInc = (y2 - y1) / m;
-        
+        yInc = (y2 - y1) / length;
+
+        // imprime o valor de m //
+        if (xInc > 0 && xInc < 1) {
+            System.out.format("Valor de m = (%.2f) %n", xInc);
+        } else {
+            System.out.format("Valor de m = (%.2f) %n", yInc);
+        }
+
         // x e y recebem os pontos iniciais //
         x = x1;
         y = y1;
